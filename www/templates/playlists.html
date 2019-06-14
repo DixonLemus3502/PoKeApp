@@ -1,0 +1,19 @@
+<ion-view title="Enciclopedia">
+  <ion-content class="buscar" ng-app="pokemon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <br>
+    <center><img class="img-responsive" src="../img/pokedexu.png"></center>
+    <!--Contenedores-->
+    <div class="container">
+      <div class="row">
+        <div class="col col-100" ng-repeat="poke in pokedexb">
+          <img class="ims img-responsive" src="{{poke.data.sprites.front_default}}">
+          <p class="tew">{{poke.data.name}}</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script src="../js/script.js"></script>
+  </ion-content> 
+</ion-view>
+   

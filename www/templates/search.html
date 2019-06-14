@@ -1,0 +1,18 @@
+<ion-view view-title="BÚSQUEDA">
+  <ion-content class="buscar">
+  	<br><br>
+    <center>
+		<img class="img-responsive" src="../img/ax.png">
+		<br>
+		<br>
+		<center><form class="pokeform" method="get">
+						<h5 class="whait">Pokémon:</h5><input type="text" ng-model="Nombre" placeholder="  Ingrese Nombre">	
+					</form></center>
+
+		<div ng-repeat="x in Producto | filter:Nombre">
+			<img src="{{x.Imag}}" width="300px" height="200px" class="img-responsive">
+			<p class="lcm">{{x.Pro}}</p>
+		</div>
+	</center>
+  </ion-content>
+</ion-view>
