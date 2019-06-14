@@ -10,9 +10,9 @@
     <div class="container">
       <div class="row" ng-repeat="poke in pokedexB|filter:Buscar_poke">
         <div class="col col-100">
-          <div class="cuadro cdr">
+          <div>
             <img class="im" src="{{poke.data.sprites.front_default}}">
-            <p class="cuadro" >{{poke.data.name}}</p>
+            <p class="cuadro">{{poke.data.name}}</p>
           </div>
         </div>
       </div>
