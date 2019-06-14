@@ -41,9 +41,28 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
-
+.controller('PlaylistsCtrl', function($rootScope,$scope,$http) {
+  var pokemon = angular.module("pokemon",[])
+  $scope.pokedexB = [];
+  for (var i = 0; i <= 200; i++) {
+    $http({
+    method: "GET",
+    url: "https://pokeapi.co/api/v2/pokemon/"+i
+  }).then(function callbackSuccess(y){
+    $scope.pokedexB.push(y);
+  })
+}
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-});
+.controller('SearchCtrl', function($rootScope,$scope,$http) {
+  var pokemon = angular.module("pokemon",[])
+  $scope.pokedexB = [];
+  for (var i = 0; i <= 200; i++) {
+    $http({
+    method: "GET",
+    url: "https://pokeapi.co/api/v2/pokemon/"+i
+  }).then(function callbackSuccess(y){
+    $scope.pokedexB.push(y);
+  })
+}
+})
